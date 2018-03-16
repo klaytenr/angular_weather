@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/tasks');
 app.use(bodyParser.json());
 app.use(express.static( __dirname + '/weather/dist' ));
-
+var path = require('path');
 app.all('*', (req, res, next) => {
     res.sendFile(path.resolve('./weather/dist/index.html'));
 })

@@ -1,7 +1,7 @@
 <router-outlet></router-outlet> 
 
 <h1>Burbank, CA</h1>
-<div>
+<div *ngIf='data'>
     <h4>Humidity: {{data.main.humidity}}</h4>
     <h4>Temperature (Average): {{data.main.temp}}</h4>
     <h4>Temperature (High): {{data.main.temp_max}}</h4>
